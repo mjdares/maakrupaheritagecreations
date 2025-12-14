@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Kripa Heritage Creations — Bring A Royal Touch</title>
+    <meta name="description" content="Premium Rajasthani architectural heritage. Custom Jarokhas, Baradaris, Stone Pillars, Jali Work & Italian Marble. Udaipur's finest craftsmen bringing royal elegance to your space.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --charcoal: #141414;
+            --dark-gray: #1a1a1a;
+            --gold: #c9a227;
+            --gold-light: #d4af37;
+            --gold-pale: #e8d5a3;
+            --cream: #f5f0e6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            color: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-weight: 300;
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-logo {
+            width: 200px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Subtle grain texture */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 5%;
+        }
+
+        .nav-logo {
+            height: 55px;
+            transition: all 0.3s;
+        }
+
+        nav.scrolled .nav-logo {
+            height: 45px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-phone {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: opacity 0.3s;
+        }
+
+        .nav-phone:hover {
+            opacity: 0.8;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.8rem 1.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.4s;
+        }
+
+        .nav-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(201, 162, 39, 0.05) 0%, transparent 40%),
+                var(--black);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L80 40L40 80L0 40L40 0z' fill='none' stroke='%23c9a227' stroke-width='0.5'/%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            padding: 0 2rem;
+        }
+
+        .hero-logo {
+            width: min(450px, 80vw);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold-pale);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: rgba(245, 240, 230, 0.7);
+            line-height: 1.9;
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+            opacity: 0;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--black);
+            padding: 1.1rem 2.8rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(201, 162, 39, 0.5);
+            color: var(--gold);
+            padding: 1.1rem 2.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.4s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            background: rgba(201, 162, 39, 0.1);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+            opacity: 0;
+        }
+
+        .scroll-indicator span {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(201, 162, 39, 0.6);
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; height: 60px; }
+            50% { opacity: 1; height: 80px; }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 8rem 5%;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            color: var(--cream);
+            line-height: 1.2;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--charcoal);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+            color: rgba(245, 240, 230, 0.8);
+        }
+
+        .about-content strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: all 0.4s;
+        }
+
+        .stat:hover {
+            border-color: var(--gold);
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(245, 240, 230, 0.6);
+        }
+
+        .about-visual {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.15), rgba(201, 162, 39, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-visual::before {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border: 1px solid rgba(201, 162, 39, 0.3);
+        }
+
+        .about-visual-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: var(--gold-pale);
+            text-align: center;
+            padding: 3rem;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--black);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--charcoal);
+            border: 1px solid rgba(201, 162, 39, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-image {
+            height: 280px;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.2), rgba(20, 20, 20, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L55 30L30 55L5 30L30 5z' fill='none' stroke='%23c9a227' stroke-width='0.3'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+
+        .product-image-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--gold-pale);
+            text-align: center;
+            z-index: 1;
+            padding: 1rem;
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+
+        .product-desc {
+            font-size: 0.95rem;
+            color: rgba(245, 240, 230, 0.6);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(201, 162, 39, 0.15);
+        }
+
+        .product-features li {
+            font-size: 0.85rem;
+            color: rgba(245, 240, 230, 0.7);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .product-features li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.5rem;
+            top: 0.7rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(201, 162, 39, 0.15);
+        }
+
+        .product-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--gold);
+        }
+
+        .product-price-note {
+            font-size: 0.7rem;
+            color: rgba(245, 240, 230, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .product-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.7rem 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .product-cta:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--charcoal);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.1), rgba(20, 20, 20, 0.95));
+            cursor: pointer;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gold);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 0.1;
+        }
+
+        .gallery-item-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .gallery-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        .gallery-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--cream);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s;
+        }
+
+        .gallery-item:hover .gallery-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--black);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--cream);
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2.5rem;
+            padding-left: 2rem;
+            border-left: 1px solid rgba(201, 162, 39, 0.3);
+        }
+
+        .contact-item-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-item-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--cream);
+            line-height: 1.6;
+        }
+
+        .contact-item-value a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item-value a:hover {
+            color: var(--gold);
+        }
+
+        .whatsapp-card {
+            background: linear-gradient(135deg, #128C7E, #075E54);
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+        }
+
+        .whatsapp-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .whatsapp-card p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: white;
+            color: #128C7E;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 80px;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(245, 240, 230, 0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            color: rgba(245, 240, 230, 0.4);
+            font-size: 0.8rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 5%;
+            }
+
+            .nav-links, .nav-phone {
+                display: none;
+            }
+
+            .hero-logo {
+                width: min(300px, 80vw);
+            }
+
+            section {
+                padding: 5rem 5%;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-visual {
+                height: 400px;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .stat {
+                padding: 1.5rem 1rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .products-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 1;
+            }
+
+            .gallery-grid {
+                grid-template-rows: repeat(6, 250px);
+            }
+        }
+
+        /* Smooth scroll offset for fixed nav */
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <img src="Logo.jpg" alt="Maa Kripa" class="preloader-logo">
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <img src="Logo.jpg" alt="Maa Kripa Heritage Creations" class="nav-logo">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#gallery">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="tel:+919414288089" class="nav-phone">+91 9414288089</a>
+            <a href="https://wa.me/919414288089" class="nav-btn">WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <img src="Logo.jpg" alt="Maa Kripa Heritage Creations" class="hero-logo">
+            <p class="hero-tagline">Bring A Royal Touch</p>
+            <p class="hero-subtitle">
+                Premium Rajasthani architectural heritage crafted by master artisans.
+                Custom Jarokhas, Baradaris, pillars & marble work for discerning spaces.
+            </p>
+            <div class="hero-cta">
+                <a href="#products" class="btn-gold">Explore Collection</a>
+                <a href="#contact" class="btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-content reveal">
+                <span class="section-label">Our Legacy</span>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Udaipur's Premier Heritage Craftsmen</h2>
+                <p>
+                    For over <strong>15 years</strong>, Maa Kripa Heritage Creations has been the definitive source for authentic Rajasthani architectural elements. Based in the royal city of Udaipur, our master artisans bring centuries-old craftsmanship to contemporary spaces.
+                </p>
+                <p>
+                    From the intricate lacework of traditional <strong>Jarokha windows</strong> to the majestic grandeur of <strong>Baradari pavilions</strong>, each piece we create carries the soul of Rajasthan's architectural heritage. We work exclusively with premium materials—Italian marble, natural sandstone, and reinforced cement—ensuring our creations endure for generations.
+                </p>
+                <p>
+                    Our clientele includes luxury hotels, heritage resorts, private villas, and discerning homeowners across India who seek the authentic royal touch that only handcrafted heritage can provide.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Custom</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual reveal">
+                <div class="about-visual-text">
+                    "Where ancient craft meets modern excellence—every piece tells a story of royal Rajasthan"
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header reveal">
+            <span class="section-label">Our Craft</span>
+            <h2 class="section-title">Heritage Collection</h2>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <span class="product-image-label">Gokhda<br>Jarokha</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Gokhda Jarokha</h3>
+                    <p class="product-desc">Traditional Rajasthani window frames with intricate carved motifs. The quintessential element of heritage architecture.</p>
+                    <ul class="product-features">
+                        <li>Hand-carved heritage designs</li>
+                        <li>Stone & premium cement</li>
+                        <li>Custom dimensions</li>
+                        <li>Weather-resistant finish</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">₹25,000+</div>
+                            <div class="product-price-note">Starting price</div>
+                        </div>
+                        <a href="https://wa.me/919414288089?text=Enquiry: Gokhda Jarokha" class="product-cta">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <span class="product-image-label">Pool<br>Baradari</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Swimming Pool Baradari</h3>
+                    <p class="product-desc">Palatial pavilion structures for poolside luxury. Transform your space into a royal retreat.</p>
+                    <ul class="product-features">
+                        <li>Palatial architecture</li>
+                        <li>Waterproof construction</li>
+                        <li>Pillar & dome options</li>
+                        <li>Complete installation</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">₹1,50,000+</div>
+                            <div class="product-price-note">Custom pricing</div>
+                        </div>
+                        <a href="https://wa.me/919414288089?text=Enquiry: Pool Baradari" class="product-cta">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <span class="product-image-label">Cement<br>Pillars</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Decorative Pillars</h3>
+                    <p class="product-desc">Structural elegance in reinforced concrete. Load-bearing and decorative options in multiple styles.</p>
+                    <ul class="product-features">
+                        <li>Heritage & modern designs</li>
+                        <li>High-strength concrete</li>
+                        <li>Custom specifications</li>
+                        <li>On-site casting available</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">₹8,000+</div>
+                            <div class="product-price-note">Per pillar</div>
+                        </div>
+                        <a href="https://wa.me/919414288089?text=Enquiry: Cement Pillars" class="product-cta">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <span class="product-image-label">Stone<br>Artifacts</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Heritage Stone Work</h3>
+                    <p class="product-desc">Hand-carved sandstone & marble artifacts. Fountains, sculptures, panels, and bespoke pieces.</p>
+                    <ul class="product-features">
+                        <li>100% natural stone</li>
+                        <li>Traditional techniques</li>
+                        <li>Garden & interior pieces</li>
+                        <li>Bespoke commissions</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">₹15,000+</div>
+                            <div class="product-price-note">Varies by size</div>
+                        </div>
+                        <a href="https://wa.me/919414288089?text=Enquiry: Stone Artifacts" class="product-cta">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <span class="product-image-label">Italian<br>Marble</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Italian Marble</h3>
+                    <p class="product-desc">Premium imported marble with mirror finish. Flooring, cladding, and intricate inlay work.</p>
+                    <ul class="product-features">
+                        <li>Genuine Italian marble</li>
+                        <li>Multiple varieties</li>
+                        <li>Expert installation</li>
+                        <li>Polishing & care</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">₹450/sqft+</div>
+                            <div class="product-price-note">Material + labor</div>
+                        </div>
+                        <a href="https://wa.me/919414288089?text=Enquiry: Italian Marble" class="product-cta">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <span class="product-image-label">Jali<br>Work</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Jali Railing & Screens</h3>
+                    <p class="product-desc">Geometric lattice work in stone and cement. Beautiful light-filtering patterns for balconies and partitions.</p>
+                    <ul class="product-features">
+                        <li>Traditional jali patterns</li>
+                        <li>Railings & screens</li>
+                        <li>Interior partitions</li>
+                        <li>Durable finish</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price">₹1,200/sqft+</div>
+                            <div class="product-price-note">Design dependent</div>
+                        </div>
+                        <a href="https://wa.me/919414288089?text=Enquiry: Jali Work" class="product-cta">Enquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header reveal">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Completed Projects</h2>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item reveal">
+                <div class="gallery-item-content">
+                    <span class="gallery-icon">🏛️</span>
+                    <span class="gallery-label">Luxury Villa, Udaipur</span>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <div class="gallery-item-content">
+                    <span class="gallery-icon">🏊</span>
+                    <span class="gallery-label">Resort Baradari</span>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <div class="gallery-item-content">
+                    <span class="gallery-icon">🏨</span>
+                    <span class="gallery-label">Hotel Entrance</span>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <div class="gallery-item-content">
+                    <span class="gallery-icon">🪟</span>
+                    <span class="gallery-label">Jali Screens</span>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <div class="gallery-item-content">
+                    <span class="gallery-icon">⛲</span>
+                    <span class="gallery-label">Garden Fountain</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header reveal">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Begin Your Heritage Journey</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Let's Create Something Royal</h3>
+
+                <div class="contact-item">
+                    <div class="contact-item-label">Call Us</div>
+                    <div class="contact-item-value">
+                        <a href="tel:+919414288089">+91 9414 288 089</a><br>
+                        <a href="tel:+918048604343">+91 8048 604 343</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-label">Visit Our Workshop</div>
+                    <div class="contact-item-value">
+                        9-A, Shivam Complex<br>
+                        Badgaon, Udaipur<br>
+                        Rajasthan 313011
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-label">Proprietor</div>
+                    <div class="contact-item-value">
+                        Mohit Sharma
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-card reveal">
+                <h4>Quick Enquiry</h4>
+                <p>Get instant responses, product images, and quotes on WhatsApp</p>
+                <a href="https://wa.me/919414288089?text=Hello, I'm interested in your heritage architecture products." class="whatsapp-btn">
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="Logo.jpg" alt="Maa Kripa Heritage Creations" class="footer-logo">
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#gallery">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:+919414288089">Call</a>
+                <a href="https://wa.me/919414288089">WhatsApp</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Maa Kripa Heritage Creations. All Rights Reserved.</p>
+                <p style="margin-top: 0.5rem;">Maa Kripa Enterprises · Proprietor: Mohit Sharma · Udaipur, Rajasthan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Reveal animations
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        reveals.forEach(reveal => revealObserver.observe(reveal));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
