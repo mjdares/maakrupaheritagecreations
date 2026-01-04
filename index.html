@@ -471,9 +471,11 @@
         .about-visual {
             position: relative;
             height: 600px;
-            background: linear-gradient(135deg, rgba(201, 162, 39, 0.15), rgba(201, 162, 39, 0.05));
+            background:
+                linear-gradient(to bottom, rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.6)),
+                url('images/Ancient-Craft.png') center/cover no-repeat;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
         }
 
@@ -486,12 +488,18 @@
 
         .about-visual-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-style: italic;
-            color: var(--gold-pale);
+            color: var(--cream);
             text-align: center;
-            padding: 3rem;
+            padding: 2rem 3rem;
             line-height: 1.6;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(5px);
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         /* Products Section */
