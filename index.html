@@ -695,9 +695,9 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            max-width: 1200px;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -794,6 +794,104 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
+        /* Contact Form */
+        .contact-form-card {
+            background: var(--charcoal);
+            padding: 2.5rem;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+        }
+
+        .contact-form-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            padding: 0.9rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--cream);
+            transition: border-color 0.3s, background 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(245, 240, 230, 0.4);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c9a227' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+
+        .form-group select option {
+            background: var(--charcoal);
+            color: var(--cream);
+        }
+
+        .form-submit {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 1rem 2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .form-submit:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
         /* Footer */
         footer {
             background: var(--charcoal);
@@ -866,6 +964,16 @@
 
             .gallery-item:first-child {
                 grid-column: span 2;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form-card {
+                grid-column: span 2;
+                order: -1;
             }
         }
 
@@ -1241,6 +1349,47 @@
                         Mohit Sharma
                     </div>
                 </div>
+            </div>
+
+            <div class="contact-form-card reveal">
+                <h4>Send Us a Message</h4>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interested In</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select a product category</option>
+                            <option value="Jharokha">Jharokha (Window Balconies)</option>
+                            <option value="Temple">Temple & Mandir</option>
+                            <option value="Pillars">Pillars & Columns</option>
+                            <option value="Baradari">Baradari & Pavilions</option>
+                            <option value="Fountain">Fountains</option>
+                            <option value="Chattri">Chattri & Cenotaphs</option>
+                            <option value="Custom">Custom Heritage Work</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Enquiry</button>
+                </form>
             </div>
 
             <div class="whatsapp-card reveal">
