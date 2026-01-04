@@ -208,9 +208,8 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(201, 162, 39, 0.05) 0%, transparent 40%),
-                var(--black);
+                linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.85)),
+                url('https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
         }
 
         .hero-pattern {
@@ -969,6 +968,10 @@
 
         /* Mobile Responsive */
         @media (max-width: 1024px) {
+            .nav-phone {
+                display: none;
+            }
+
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1298,27 +1301,27 @@
         <div class="gallery-grid">
             <div class="gallery-item reveal">
                 <div class="gallery-item-content">
-                    <span class="gallery-label">Luxury Villa, Udaipur</span>
+                    <span class="gallery-label">White Building with Jharokhas</span>
                 </div>
             </div>
             <div class="gallery-item reveal">
                 <div class="gallery-item-content">
-                    <span class="gallery-label">Resort Baradari</span>
+                    <span class="gallery-label">Red Baradari with Domes</span>
                 </div>
             </div>
             <div class="gallery-item reveal">
                 <div class="gallery-item-content">
-                    <span class="gallery-label">Hotel Entrance</span>
+                    <span class="gallery-label">White Pavilion at Night</span>
                 </div>
             </div>
             <div class="gallery-item reveal">
                 <div class="gallery-item-content">
-                    <span class="gallery-label">Jali Screens</span>
+                    <span class="gallery-label">Jali Screen Poolside</span>
                 </div>
             </div>
             <div class="gallery-item reveal">
                 <div class="gallery-item-content">
-                    <span class="gallery-label">Garden Fountain</span>
+                    <span class="gallery-label">Grand Entrance Gate</span>
                 </div>
             </div>
         </div>
