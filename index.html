@@ -230,11 +230,41 @@
             padding: 0 2rem;
         }
 
-        .hero-logo {
-            width: min(450px, 80vw);
-            margin-bottom: 3rem;
+        .hero-title-wrapper {
+            margin-bottom: 2.5rem;
             animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
             opacity: 0;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .hero-title-main {
+            display: block;
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title-sub {
+            display: block;
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(245, 240, 230, 0.85);
+        }
+
+        .gold-accent {
+            color: var(--gold);
+            font-style: italic;
+            letter-spacing: 0.15em;
         }
 
         @keyframes fadeInUp {
@@ -1024,8 +1054,12 @@
                 display: none;
             }
 
-            .hero-logo {
-                width: min(300px, 80vw);
+            .hero-title-main {
+                letter-spacing: 0.1em;
+            }
+
+            .hero-title-sub {
+                letter-spacing: 0.15em;
             }
 
             section {
@@ -1101,7 +1135,12 @@
         <div class="hero-bg"></div>
         <div class="hero-pattern"></div>
         <div class="hero-content">
-            <img src="Logo.jpg" alt="Maa Kripa Heritage Creations" class="hero-logo">
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Maa Kripa</span>
+                    <span class="hero-title-sub">Heritage <span class="gold-accent">Creations</span></span>
+                </h1>
+            </div>
             <p class="hero-tagline">Bring A Royal Touch</p>
             <p class="hero-subtitle">
                 Premium Rajasthani architectural heritage crafted by master artisans.
